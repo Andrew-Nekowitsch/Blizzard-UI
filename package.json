@@ -2,9 +2,11 @@
   "name": "react-typescript-webpack-starter",
   "version": "1.0.0",
   "description": "A starter template for React with Typescript using Webpack 5",
+  "homepage": "https://andrew-nekowitsch.github.io/Blizzard-UI",
   "scripts": {
     "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
     "build": "webpack --config webpack/webpack.config.js --env env=prod",
+    "deploy": "gh-pages -d build",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
