@@ -1,11 +1,11 @@
 /* Overwatch Boilerplate */ /*#region*/
 @font-face {
   font-family: normal-ow;
-  src: url(../assets/fonts/Futura\ Round\ Demi.ttf);
+  src: url(assets/fonts/Futura\ Round\ Demi.ttf);
 }
 @font-face {
   font-family: italics-ow;
-  src: url(../assets/fonts/italics.ttf);
+  src: url(assets/fonts/italics.ttf);
 }
 
 html {
@@ -17,7 +17,7 @@ html {
 
 /* Overwatch Template */ /*#region*/
 .bg-image {
-  background-image: url('../assets/ow/main-menu2.jpg');
+  background-image: url('assets/ow/images/main-menu.jpg');
   background-color: #000000;
   background-position: center;
   background-repeat: no-repeat;
