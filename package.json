@@ -1,10 +1,12 @@
 {
-  "name": "react-typescript-webpack-starter",
+  "name": "blizzard-ui",
   "version": "1.0.0",
-  "description": "A starter template for React with Typescript using Webpack 5",
+  "description": "An attempt to copy blizzard's ui",
+  "homepage": "https://andrew-nekowitsch.github.io/Blizzard-UI",
   "scripts": {
     "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
     "build": "webpack --config webpack/webpack.config.js --env env=prod",
+    "deploy": "gh-pages -d build",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,9 +14,7 @@
   "keywords": [
     "React",
     "TypeScript",
-    "Webpack 5",
-    "Starter Template",
-    "Boilerplate"
+    "Webpack 5"
   ],
   "author": "Andrew-Nekowitsch",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "@babel/preset-typescript": "^7.12.16",
     "@babel/runtime": "^7.13.10",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
-    "@types/react": "^17.0.2",
+    "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
@@ -50,11 +50,11 @@
     "husky": "4",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
-    "react-refresh": "^0.9.0",
+    "react-refresh": "^0.10.0",
     "style-loader": "^2.0.0",
     "typescript": "^4.1.5",
     "webpack": "^5.21.2",
-    "webpack-cli": "^4.5.0",
+    "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.2",
     "webpack-merge": "^5.7.3"
   },
