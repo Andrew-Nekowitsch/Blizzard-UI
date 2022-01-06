@@ -1,124 +1,44 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserJSPlugin = require('terser-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CnameWebpackPlugin = require('cname-webpack-plugin');
-const settings = require('../settings');
-
-const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
-const entry = path.join(__dirname, '../src/index.tsx');
-const port = 8262;
-const output = path.join(__dirname, '../dist');
-const publicPath = mode === 'production' ? settings.repoPath || '/' : '/';
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-	mode,
-
-	entry:
-		mode === 'production'
-			? entry
-			: [`webpack-dev-server/client?http://localhost:${port}`, 'webpack/hot/only-dev-server', entry],
-
-	output: {
-		path: output,
-		filename: mode === 'production' ? '[name].[contenthash].js' : '[name].js',
-		publicPath,
-	},
-
-	optimization: {
-		minimizer: [new TerserJSPlugin({})],
-		runtimeChunk: 'single',
-	},
-
-	devServer: {
-		port,
-		compress: true,
-		contentBase: output,
-		publicPath,
-		stats: { colors: true },
-		hot: true,
-		historyApiFallback: true,
-		open: true,
-	},
-
-	devtool: mode === 'production' ? false : 'eval',
-
-	resolve: {
-		modules: [path.join(__dirname, '../node_modules')],
-		extensions: ['.js', '.jsx', '.ts', '.tsx'],
-	},
-
-	module: {
-		rules: [
-			{
-				test: /\.(ts|tsx|js|jsx)$/,
-				exclude: /node_modules/,
-				include: path.resolve(__dirname, '../src'),
-				use: [
-					{
-						loader: 'babel-loader',
-					},
-				],
-			},
-			{
-				test: /\.css$/i,
-				use: [MiniCssExtractPlugin.loader, 'css-loader'],
-			},
-			{
-				test: /\.(svg|png|jpg|gif|woff|woff2|otf|ttf|eot)$/,
-				loader: 'file-loader',
-			},
-		],
-	},
-
-	plugins: [
-		new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(mode) }),
-		new FaviconsWebpackPlugin({
-			logo: path.join(__dirname, '../favicon.png'),
-			background: '#ffeeee',
-			icons: {
-				android: true,
-				appleIcon: true,
-				appleStartup: false,
-				coast: false,
-				favicons: true,
-				firefox: false,
-				opengraph: true,
-				twitter: false,
-				yandex: false,
-				windows: false,
-			},
-		}),
-		new HtmlWebpackPlugin({
-			templateContent: ({ htmlWebpackPlugin }) => `
-			<!DOCTYPE html>
-			<html>
-			<head>
-            ${htmlWebpackPlugin.tags.headTags}
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>${settings.title}</title>
-			</head>
-			<body>
-            <noscript>
-			Enable JavaScript to use Frontend toolbox
-            </noscript>
-			
-            <div id="app"></div>
-            ${htmlWebpackPlugin.tags.bodyTags}
-            <!-- htmlWebpackPlugin doesn't allow for gh-pages scripts -->
-            <script src="runtime.js"></script>
-            <script src="main.js"></script>
-			</body>
-			</html>
-			`,
-		}),
-		new MiniCssExtractPlugin(),
-		...(mode !== 'production'
-			? [new webpack.HotModuleReplacementPlugin()]
-			: [...(settings.cname ? [new CnameWebpackPlugin({ domain: settings.cname })] : [])]),
-	],
-};
+  entry: path.resolve(__dirname, '..', './src/index.tsx'),
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        type: 'asset/inline',
+      },
+    ],
+  },
+  output: {
+    path: path.resolve(__dirname, '..', './build'),
+    filename: 'bundle.js',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '..', './src/index.html'),
+    }),
+  ],
+  stats: 'errors-only',
+}
