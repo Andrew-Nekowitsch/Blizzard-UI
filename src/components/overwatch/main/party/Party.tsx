@@ -1,7 +1,7 @@
 import SearchPlayerImage from '../../../../assets/ow/images/search-players.jpg'
 import AddPlayerImage from '../../../../assets/ow/images/add-player.jpg'
 import AnaImage from '../../../../assets/ow/images/ana.png'
-import PerformanceStatImage from '../../../../assets/ow/images/ana.png'
+import PerformanceStatImage from '../../../../assets/ow/images/overwatch-performance-stat.png'
 
 import './Party.css'
 
