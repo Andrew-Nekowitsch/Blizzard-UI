@@ -1,0 +1,47 @@
+/* Overwatch Boilerplate */ /*#region*/
+@font-face {
+  font-family: normal-ow;
+  src: url(../assets/fonts/Futura\ Round\ Demi.ttf);
+}
+@font-face {
+  font-family: italics-ow;
+  src: url(../assets/fonts/italics.ttf);
+}
+
+html {
+  --ow-text-outline: rgb(36, 36, 36);
+  --ow-sub-nav-text: rgb(209, 211, 223);
+  --ow-player-background-color: rgb(74, 85, 107);
+  --ow-player-status-color: rgb(125, 255, 0);
+  font-size: 20px;
+  background-color: #000000;
+}
+/* Overwatch Boilerplate */ /*#endregion*/
+
+/* Overwatch Template */ /*#region*/
+.bg-image {
+  opacity: 0.2;
+  background-image: url('../assets/ow/images/main-menu2.jpg');
+  background-color: #000000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -10;
+}
+/* Overwatch Template */ /*#endregion*/
+
+/* Overwatch Screen */ /*#region*/
+.overwatch {
+  position: absolute;
+  left: 6.7%;
+  right: 6.4%;
+  top: 0;
+  bottom: 0;
+  color: white;
+}
+/* Overwatch Screen */ /*#endregion*/

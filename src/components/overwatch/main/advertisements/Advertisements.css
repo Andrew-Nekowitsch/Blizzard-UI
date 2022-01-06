@@ -1,0 +1,38 @@
+/* Overwatch Advertisements */ /*#region*/
+.float-right {
+  float: right;
+}
+.align-right {
+  text-align: right;
+}
+.ow-advertisements {
+  position: absolute;
+  bottom: 1.8rem;
+  right: 5.75rem;
+}
+.content-sub-label {
+  padding-top: 0rem;
+  font-family: normal-ow;
+  color: var(--ow-sub-nav-text);
+  font-size: 1.005rem;
+  line-height: 1.1rem;
+}
+.content-label {
+  margin: 0.25rem;
+  margin-bottom: 0.85rem;
+  font-family: italics-ow;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+}
+.ow-btn {
+  padding: 6px 52px;
+  width: fit-content;
+  border-radius: 0.125rem;
+  font-family: normal-ow;
+  font-size: 1.005rem;
+  color: white;
+}
+.btn-yellow {
+  background-color: rgb(253, 179, 54);
+}
+/* Overwatch Advertisements */ /*#endregion*/
