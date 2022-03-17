@@ -1,92 +1,106 @@
 /* Overwatch Party */ /*#region*/
 .float-left {
-  float: left;
+	float: left;
 }
 .flex-column {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .flex-row {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 .ow-party {
-  position: absolute;
-  right: 2.125rem;
-  top: 1.3rem;
-  min-width: 21.5rem;
-  height: 2.65rem;
-}
-.party-square {
-  width: 2.65rem;
-  height: 2.65rem;
-  margin-right: 0.125rem;
+	position: absolute;
+	right: 2.57%;
+	top: 2.75%;
+	min-width: 25.69%;
+	height: 5.6%;
 }
 .search-player {
-  height: 100%;
+	/* width: fit-content; */
+}
+.party-square {
+	height: 100%;
 }
 .add-player {
-  height: 100%;
-  margin-left: 0.23rem;
+	margin-left: 1%;
 }
 .player {
-  background-color: var(--ow-player-background-color);
-  margin-left: 0.4583rem;
-  flex: 1;
+	background-color: var(--ow-player-background-color);
+	margin-left: 0.5vw;
+	flex: 1;
 }
 .player-name-container {
-  margin-left: 0.55rem;
-  margin-top: 0.35rem;
-  flex: 1;
+	flex: 1;
+	margin-left: 5%;
+	height: 100%;
+	font-size: 10vw;
 }
 .player-icon {
-  border-left: 0.15rem solid var(--ow-player-status-color);
+	border-left: 0.2vw solid var(--ow-player-status-color);
+	margin-right: 1%;
+}
+.player-name-stats {
+	height: 100%;
+	width: 100%;
+	margin-left: 0.75vw;
 }
 .player-name {
-  margin-left: 0.35rem;
-  line-height: 0.75rem;
-  font-size: 0.75rem;
-  font-family: normal-ow;
-  color: var(--ow-sub-nav-text);
+	margin-top: 0.7vw;
+	margin-bottom: 0.1vw;
+	line-height: 50%;
+	height: 25%;
+	font-size: 10%;
+	font-family: normal-ow;
+	color: var(--ow-sub-nav-text);
 }
 .player-stats {
-  margin-top: 0.1rem;
-  line-height: 0.5rem;
-  font-size: 0.5rem;
-  font-family: normal-ow;
-  color: var(--ow-sub-nav-text);
+	margin: auto;
+	line-height: 100%;
+	font-family: normal-ow;
+	color: var(--ow-sub-nav-text);
+	font-size: 7%;
+	height: 25%;
 }
 .player-level-bubble {
-  padding: 0.05rem 0.05rem;
-  border-radius: 0.125rem;
+	padding: 0.05%;
+	border-radius: 12.5%;
+	width: fit-content;
 }
 .bronze {
-  background-color: rgb(163, 84, 53);
+	background-color: rgb(163, 84, 53);
 }
 .sky-blue {
-  background-color: rgb(23, 162, 167);
+	background-color: rgb(23, 162, 167);
 }
 .small-icon {
-  margin: 0.05rem;
-  height: 0.4rem;
-  color: transparent;
-  text-shadow: 0 0 0 white;
+	margin: auto;
+	height: 0.65vw;
+	color: transparent;
+	text-shadow: 0 0 0 white;
 }
 .player-stat-ring {
-  border: 0.1rem var(--ow-player-background-color) solid;
-  border-radius: 0.125rem;
-  padding: 0.05rem 0.05rem;
-  box-shadow: 0 0 0 0.05rem rgb(23, 162, 167);
+	border: 0.1vw var(--ow-player-background-color) solid;
+	padding: 10% 15%;
+	border-radius: 12.5%;
+	box-shadow: 0 0 0 0.05rem rgb(23, 162, 167);
+	margin: 0px;
+}
+.player-level-outer {
+	width: 9%;
 }
 .player-level-inner {
-  margin-top: 0.15rem;
-  padding: 0.05rem 0.35rem;
+	margin: 0px;
+	margin-top: 5%;
+	padding: 10% 25%;
+	width: fit-content;
 }
 .player-stat-separator {
-  margin-left: 0.25rem;
+	margin-left: 3.5%;
 }
 .performance-padding {
-  padding: 0 0.05rem;
+	padding: 0 0.05rem;
 }
 
 /* Overwatch Party */ /*#endregion*/
