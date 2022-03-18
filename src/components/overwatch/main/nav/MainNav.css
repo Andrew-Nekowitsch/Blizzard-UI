@@ -1,51 +1,72 @@
 /* Overwatch Nav */ /*#region*/
 .ow-nav {
-  position: absolute;
-  bottom: 49.95%;
-  margin: 0;
-  -ms-transform: translateY(45%);
-  transform: translateY(45%);
+	position: absolute;
+	bottom: 50%;
+	margin: 0;
+	-ms-transform: translateY(45.5%);
+	transform: translateY(45.5%);
+	width: 50%;
+	font-size: 10vw;
 }
 
 .ow-main-nav {
-  padding-left: 2rem;
-  margin-top: 0.5rem;
-  font-family: italics-ow;
-  font-size: 3.25rem;
-  line-height: 3.6rem;
+	padding-left: 5.3%;
+	font-family: italics-ow;
+	font-size: 35%;
+	line-height: 3.8vw;
+	line-height: 112%;
 }
 .ow-sub-nav {
-  padding-top: 0rem;
-  padding-left: 1.9rem;
-  font-family: normal-ow;
-  color: var(--ow-sub-nav-text);
-  font-size: 1.2rem;
-  line-height: 1.84rem;
+	padding-top: 0;
+	padding-left: 5.25%;
+	font-family: normal-ow;
+	color: var(--ow-sub-nav-text);
+	font-size: 12%;
+	line-height: 1.9vw;
+	line-height: 165%;
+	letter-spacing: 0.75px;
 }
 
 .ow-main-nav ul,
 .ow-sub-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-  cursor: default;
+	list-style-type: none;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	cursor: default;
 }
 .ow-main-nav li,
 .ow-sub-nav li {
-  text-shadow: 0 0 0.15rem var(--ow-text-outline);
+	width: -moz-fit-content;
+	width: fit-content;
+	text-shadow: 0 0 0.15rem var(--ow-text-outline);
 }
 
 .ow-main-nav li:hover,
 .ow-sub-nav li:hover {
-  font-size: 1.1em;
-  transition: font-size 0.1s, padding-left 0.1s;
-}
-.ow-main-nav li:hover {
-  line-height: 3.6rem;
-  padding-left: 2.1rem;
+	font-size: 110%;
+	padding-left: 5.3%;
+	transition: font-size 0.1s, padding-left 0.1s;
 }
 .ow-sub-nav li:hover {
-  padding-left: 0.5rem;
+	padding-left: 2%;
 }
 /* Overwatch Nav */ /*#endregion*/
+@media screen and (max-width: 1920px) {
+	.ow-nav {
+		position: absolute;
+		bottom: 50%;
+		margin: 0;
+		-ms-transform: translateY(45.5%);
+		transform: translateY(45.5%);
+		width: 50%;
+		font-size: 10vw;
+	}
+	.ow-main-nav {
+		line-height: 105%;
+	}
+	.ow-sub-nav {
+		padding-top: 3px;
+		line-height: 160%;
+	}
+}

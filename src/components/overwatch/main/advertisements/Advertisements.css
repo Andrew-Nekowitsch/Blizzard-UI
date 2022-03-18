@@ -7,32 +7,47 @@
 }
 .ow-advertisements {
 	position: absolute;
-	bottom: 2rem;
-	right: 5.75rem;
+	bottom: 4%;
+	right: 6.75%;
+	width: 30%;
+}
+.ow-advertisements {
+	font-size: 10vw;
+	margin-right: 0.1%;
 }
 .content-sub-label {
-	padding-top: 0rem;
+	padding-top: 0;
 	font-family: normal-ow;
 	color: var(--ow-sub-nav-text);
-	font-size: 1.005rem;
-	line-height: 1.1rem;
+	font-size: 10.875%;
+	line-height: 100%;
+	margin-bottom: 1.5%;
 }
 .content-label {
-	margin: 0.25rem;
-	margin-bottom: 0.85rem;
 	font-family: italics-ow;
-	font-size: 2.8rem;
-	line-height: 2.8rem;
+	font-size: 30%;
+	line-height: 100%;
+	margin-right: 1%;
+	margin-bottom: 3.5%;
+	letter-spacing: 0.125px;
 }
 .ow-btn {
-	padding: 6px 52px;
-	width: fit-content;
-	border-radius: 0.125rem;
+	padding: 0.85vh 2.9vw;
+	border-radius: 1%;
 	font-family: normal-ow;
-	font-size: 1.005rem;
+	font-size: 10%;
 	color: white;
 }
 .btn-yellow {
 	background-color: rgb(253, 179, 54);
 }
 /* Overwatch Advertisements */ /*#endregion*/
+
+@media screen and (max-width: 1920px) {
+	.content-sub-label {
+		font-size: 10.5%;
+	}
+	.content-label {
+		font-size: 29%;
+	}
+}

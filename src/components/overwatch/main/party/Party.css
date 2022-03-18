@@ -82,7 +82,7 @@
 }
 .player-stat-ring {
 	border: 0.1vw var(--ow-player-background-color) solid;
-	padding: 10% 15%;
+	padding: 5% 15%;
 	border-radius: 12.5%;
 	box-shadow: 0 0 0 0.05rem rgb(23, 162, 167);
 	margin: 0px;
