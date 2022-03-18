@@ -35,7 +35,7 @@
 	flex: 1;
 	margin-left: 5%;
 	height: 100%;
-	font-size: 10vw;
+	font-size: 19vh;
 }
 .player-icon {
 	border-left: 0.2vw solid var(--ow-player-status-color);
