@@ -13,7 +13,6 @@
 	padding-left: 5.3%;
 	font-family: italics-ow;
 	font-size: 35%;
-	line-height: 3.8vw;
 	line-height: 112%;
 }
 .ow-sub-nav {
@@ -60,7 +59,7 @@
 		-ms-transform: translateY(45.5%);
 		transform: translateY(45.5%);
 		width: 50%;
-		font-size: 10vw;
+		font-size: 11.5vw;
 	}
 	.ow-main-nav {
 		line-height: 105%;
